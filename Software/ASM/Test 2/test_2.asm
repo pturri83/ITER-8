@@ -7,16 +7,13 @@
 ; ==========================================================
 
 ; Instruction set
-
     .PC02                                                   ; 65C02
 
 ; Parameters
-
     .INCLUDE        "../lib/par/var_hw.asm"                 ; Hardware parameters
     .INCLUDE        "../lib/par/char_map.asm"               ; Characters map
 
 ; Macros
-
     .INCLUDE        "../lib/mcr/cpu.asm"                    ; CPU functions
     .INCLUDE        "../lib/mcr/lcd.asm"                    ; LCD
     .INCLUDE        "../lib/mcr/utils.asm"                  ; Utilities
@@ -25,12 +22,10 @@
 ; ==========================================================
 
 ; Data
-
     DIVID_IN        = 5483                                  ; Dividend (16-bit)
     DIVIS_IN        = 59                                    ; Divisor (16-bit)
 
 ; RAM adresses
-
     DIVID           = $0200                                 ; Dividend (2 B)
     DIVIS           = $0202                                 ; Divisor (2 B)
     QUOT            = $0204                                 ; Quotient (2 B)
@@ -45,21 +40,18 @@
 ; ==========================================================
 
 ; Reset vector
-
     .SEGMENT        "RESET"
     .WORD           ROM_A
 
 ; ==========================================================
 
 ; Main code
-
     .CODE
 
+; Initialize hardware
 START:
-
-; Setup hardware
-    CPU_SETUP                                               ; CPU
-    LCD_SETUP                                               ; LCD
+    CPU_INIT                                                ; CPU
+    LCD_INIT                                                ; LCD
 
 ; Dividend
     LDA             DIVID_N                                 ; Store dividend
@@ -86,17 +78,25 @@ START:
 
 ; Display division
     LCD_PRINT       DIVID_STR
-    LCD_CHAR        CHAR_SPACE
-    LCD_CHAR        CHAR_DIVISION
-    LCD_CHAR        CHAR_SPACE
+    LDA             #CHAR_SPACE
+    JSR             LCD_DATA
+    LDA             #CHAR_DIVISION
+    JSR             LCD_DATA
+    LDA             #CHAR_SPACE
+    JSR             LCD_DATA
     LCD_PRINT       DIVIS_STR
-    LCD_CHAR        CHAR_SPACE
-    LCD_CHAR        CHAR_EQUAL
-    JSR             LCD_LINE2
+    LDA             #CHAR_SPACE
+    JSR             LCD_DATA
+    LDA             #CHAR_EQUAL
+    JSR             LCD_DATA
+    JSR             LCD_LINE_2
     LCD_PRINT       QUOT_STR
-    LCD_CHAR        CHAR_SPACE
-    LCD_CHAR        CHAR_R_UP
-    LCD_CHAR        CHAR_SPACE
+    LDA             #CHAR_SPACE
+    JSR             LCD_DATA
+    LDA             #CHAR_R_UP
+    JSR             LCD_DATA
+    LDA             #CHAR_SPACE
+    JSR             LCD_DATA
     LCD_PRINT       REMAIN_STR
 
 ; Idle
@@ -105,20 +105,20 @@ START:
 ; ==========================================================
 
 ; Subroutines
-
     .INCLUDE        "../lib/sub/lcd.asm"                    ; LCD
     .INCLUDE        "../lib/sub/utils.asm"                  ; Utilities
 
 ; ==========================================================
 
 ; Data
-
     .DATA
 
+; Dividend
 DIVID_N:
     .LOBYTES        DIVID_IN
     .HIBYTES        DIVID_IN
 
+; Divisor
 DIVIS_N:
     .LOBYTES        DIVIS_IN
     .HIBYTES        DIVIS_IN

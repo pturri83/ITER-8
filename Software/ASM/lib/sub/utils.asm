@@ -6,6 +6,7 @@
 
 IDLE_LOOP:
 
+; Loop
     JMP             IDLE_LOOP
 
 ; ==========================================================
@@ -40,11 +41,11 @@ LOOP:
 
 ; Delay for one millisecond, including the subroutine jump and return commands.
 ;
-; Requirements:
-; par:var_hw.asm
-;
 ; Registers modified:
 ; A, X
+;
+; Requirements:
+; par:var_hw.asm
 
 DELAY_MS:
     .SCOPE
@@ -54,6 +55,31 @@ DELAY_MS:
     LDA             #0
     LDX             #CYCLES
     JSR             DELAY_CYCLES
+    RTS
+
+    .ENDSCOPE
+
+; ==========================================================
+
+; Delay for a number of millisecond, including the subroutine jump and return commands.
+;
+; Registers:
+; Y: Number of milliseconds
+;
+; Registers modified:
+; A, X, Y
+;
+; Requirements:
+; par:var_hw.asm
+
+DELAY_MSS:
+    .SCOPE
+
+; Delay
+LOOP:
+    JSR             DELAY_MS
+    DEY
+    BNE             LOOP
     RTS
 
     .ENDSCOPE

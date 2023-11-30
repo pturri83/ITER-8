@@ -1,1 +1,14 @@
+# General
 Temp/
+
+# VisualStudio Code
+.vs/
+.code-workspace
+
+# KiCad
+ITER-8-backups/
+~ITER-8.kicad_sch.lck
+fp-info-cache
+
+# Pycharm
+.idea/

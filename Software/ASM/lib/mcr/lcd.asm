@@ -2,165 +2,74 @@
 
 ; ==========================================================
 
-; Stop an instruction.
-;
-; Registers modified:
-; A
-;
-; Requirements:
-; par:var_hw.asm
-
-    .MACRO          LCD_INSTRUCT_STOP
-
-; Stop instruction
-    LDA             #%00000000
-    STA             VIA_RA
-
-    .ENDMACRO
-
-; ==========================================================
-
-; Send an instruction to the LCD.
-;
-; Arguments:
-; INSTRUCT: instruction (1 B)
-;
-; Registers modified:
-; A
-;
-; Requirements:
-; par:var_hw.asm
-
-    .MACRO          LCD_INSTRUCT INSTRUCT
-
-; Send instruction
-    JSR             LCD_WAIT                                ; Wait for previous instruction
-    LDA             #INSTRUCT
-    STA             VIA_RB                                  ; Send instruction
-    LDA             #LCD_E                                  ; Enable LCD
-    STA             VIA_RA
-    LCD_INSTRUCT_STOP                                       ; Stop instruction
-
-    .ENDMACRO
-
-; ==========================================================
-
-; Set VIA register B as input.
-;
-; Registers modified:
-; A
-;
-; Requirements:
-; par:var_hw.asm
-
-    .MACRO          LCD_VIA_B_IN
-
-; Set VIA register B as input
-    LDA             #%00000000
-    STA             VIA_DDRB
-
-    .ENDMACRO
-
-; ==========================================================
-
-; Set VIA register B as outut.
-;
-; Registers modified:
-; A
-;
-; Requirements:
-; par:var_hw.asm
-
-    .MACRO          LCD_VIA_B_OUT
-
-; Set VIA register B as output
-    LDA             #%11111111
-    STA             VIA_DDRB
-
-    .ENDMACRO
-
-; ==========================================================
-
-; Setup the LCD.
+; Initialize the LCD.
 ;
 ; Arguments:
 ; CURSOR: show cursor. '#0' for not blinking, '#1' for blinking (optional) (1 B)
 ;
 ; Registers modified:
-; A
+; A, X, Y
 ;
 ; Requirements:
 ; par:var_hw.asm
+; sub:lcd.asm
 
-    .MACRO          LCD_SETUP CURSOR
+    .MACRO          LCD_INIT CURSOR
     .SCOPE
 
-; Set VIA register B as output
-    LCD_VIA_B_OUT
+; Set VIA register B direction
+    LDA             #%11111110                              ; Data bits as output
+    STA             VIA_DDRB
 
-; Set part of VIA register A as output
-    LDA             #%11100000
-    STA             VIA_DDRA
+; Set LCD
+    LDY             #15                                     ; Wait 15 ms
+    JSR             DELAY_MSS
+    LDA             #%00110000                              ; Set LCD special function set
+    JSR             LCD_INSTRUCT_NOWAIT
+    LDY             #5                                      ; Wait 5 ms
+    JSR             DELAY_MSS
+    LDA             #%00110000                              ; Set LCD special function set
+    JSR             LCD_INSTRUCT_NOWAIT
+    JSR             DELAY_MS                                ; Wait 1 ms
+    LDA             #%00110000                              ; Set LCD special function set
+    JSR             LCD_INSTRUCT_NOWAIT
+    JSR             DELAY_MS                                ; Wait 1 ms
 
-; Clear LCD
-    INSTRUCT_1      = %00000001
-    LCD_INSTRUCT    INSTRUCT_1
+; Set LCD to 4-bit mode, 2 lines, 5x8 font
+    LDA             #%00100000
+    JSR             LCD_INSTRUCT_NOWAIT                     ;try to remove nowait
+    LDA             #%00101000
+    JSR             LCD_INSTRUCT
 
-; Set LCD function set to 8-bit mode, 2 lines, 5x8 font
-    INSTRUCT_2      = %00111000
-    LCD_INSTRUCT    INSTRUCT_2
-
-; Set LCD display control to on, and set cursor
+; Set LCD on, cursor
     .IFBLANK        CURSOR
-    INSTRUCT_3      = %00001100                             ; Cursor off
+    LDA             #%00001100                              ; Cursor off
     .ELSE
     .IF             (.XMATCH (CURSOR, 0))
-    INSTRUCT_3      = %00001110                             ; Cursor on, not blinking
+    LDA             #%00001110                              ; Cursor on, not blinking
     .ELSEIF         (.XMATCH (CURSOR, 1))
-    INSTRUCT_3      = %00001111                             ; Cursor on, blinking
+    LDA             #%00001111                              ; Cursor on, blinking
     .ENDIF
     .ENDIF
-    LCD_INSTRUCT    INSTRUCT_3
+    JSR             LCD_INSTRUCT
 
 ; Set LCD entry mode set to increment, no display shift
-    INSTRUCT_4      = %00000110
-    LCD_INSTRUCT    INSTRUCT_4
+    LDA             #%00000110
+    JSR             LCD_INSTRUCT
 
 ; Set cursor home
-    INSTRUCT_5      = %00000010
-    LCD_INSTRUCT    INSTRUCT_5
+    LDA             #%00000010
+    JSR             LCD_INSTRUCT
+    LDY             #2
+    JSR             DELAY_MSS
+
+; Clear LCD
+    LDA             #%00000001
+    JSR             LCD_INSTRUCT
+    LDY             #2
+    JSR             DELAY_MSS
 
     .ENDSCOPE
-    .ENDMACRO
-
-; ==========================================================
-
-; Display a character.
-; If the argument is not specified, the character is loaded from A.
-;
-; Arguments:
-; CHAR: character (1 B) (optional)
-;
-; Registers modified:
-; A
-;
-; Requirements:
-; par:var_hw.asm
-
-    .MACRO          LCD_CHAR CHAR
-
-; Display character
-    PHA
-    JSR             LCD_WAIT                                ; Wait for previous instruction
-    PLA                                                     ; If character is not loaded from memory
-    .IFNBLANK       CHAR                                    ; If character is loaded from memory
-    LDA             #CHAR
-    .ENDIF
-    STA             VIA_RB                                  ; Send character
-    LDA             #(LCD_RS | LCD_E)                       ; Send instruction to LCD
-    STA             VIA_RA
-    LCD_INSTRUCT_STOP                                       ; Stop instruction
-
     .ENDMACRO
 
 ; ==========================================================
@@ -175,6 +84,7 @@
 ;
 ; Requirements:
 ; par:var_hw.asm
+; sub:lcd.asm
 
     .MACRO          LCD_PRINT STRING
     .SCOPE
@@ -184,11 +94,9 @@
 LOOP:
     LDA             STRING, X                               ; Load character
     BEQ             EXIT                                    ; If it's NULL, exit loop
-    LCD_CHAR                                                ; Display character
+    JSR             LCD_DATA                                ; Display character
     INX                                                     ; Increase index
     JMP             LOOP                                    ; Iterate
-
-; Load registers
 EXIT:
 
     .ENDSCOPE
@@ -204,13 +112,13 @@ EXIT:
 ; QUOT: address of the temporary quotient (T) (1 B)
 ; REMAIN: address of the temporary remainder (T) (1 B)
 ;
+; Registers modified:
+; A, X
+;
 ; Requirements:
 ; par:char_map.asm
 ; mcr:math_arithm.asm
 ; mcr:utils.asm
-;
-; Registers modified:
-; A, X
 
     .MACRO          BASE10_8 B2, B10, QUOT, REMAIN
     .SCOPE
@@ -255,13 +163,13 @@ EXIT:
 ; QUOT: initial address of the temporary quotient (T) (2 B)
 ; REMAIN: initial address of the temporary remainder (T) (2 B)
 ;
+; Registers modified:
+; A, X, Y
+;
 ; Requirements:
 ; par:char_map.asm
 ; mcr:math_arithm.asm
 ; mcr:utils.asm
-;
-; Registers modified:
-; A, X, Y
 
     .MACRO          BASE10_16 B2, B10, QUOT, REMAIN
     .SCOPE

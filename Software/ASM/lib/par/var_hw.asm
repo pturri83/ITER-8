@@ -3,13 +3,11 @@
 ; ==========================================================
 
 ; Clock
-
     CLK_HZ          = 1000000                               ; Frequency (Hz)
 
 ; ==========================================================
 
 ; CPU
-
     CPU_NMIB        = $FFFA                                 ; Non-maskable interrupt vector address
     CPU_RESB        = $FFFC                                 ; Reset vector address
     CPU_IRQB        = $FFFE                                 ; Interrupt request vector address
@@ -18,14 +16,12 @@
 ; ==========================================================
 
 ; ROM
-
     ROM_A           = $8000                                 ; Base address
     ROM_S           = $8000                                 ; Size
 
 ; ==========================================================
 
 ; RAM
-
     RAM_A           = $0000                                 ; Base address
     RAM_S           = $4000                                 ; Size
     RAM_STACK_A     = $0100                                 ; Stack base address
@@ -34,7 +30,6 @@
 ; ==========================================================
 
 ; VIA
-
     VIA_RB          = $6000                                 ; ORB/IRB address
     VIA_RA          = $6001                                 ; ORA/IRA address
     VIA_DDRB        = $6002                                 ; DDRB address
@@ -46,7 +41,6 @@
 ; ==========================================================
 
 ; LCD
-
-    LCD_E           = %10000000                             ; Enable signal sent by the VIA port A
-    LCD_RWB         = %01000000                             ; R/W signal sent by the VIA port A
-    LCD_RS          = %00100000                             ; Register select signal sent by the VIA port A
+    LCD_E           = %00001000                             ; Enable signal
+    LCD_RWB         = %00000100                             ; R/W signal
+    LCD_RS          = %00000010                             ; Register select signal
