@@ -14,4 +14,7 @@
     LDX             #CPU_SP
     TXS
 
+; Enable interrupts
+    CLI
+
     .ENDMACRO

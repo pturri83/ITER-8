@@ -48,6 +48,56 @@ LOOP:
 
 ; ==========================================================
 
+; Set cursor home.
+; It requires the LCD_INIT macro to be run first, to initialize the LCD.
+;
+; Registers modified:
+; A, X, Y
+;
+; Requirements:
+; par:var_hw.asm
+; sub:lcd.asm
+; mcr:utils.asm
+
+LCD_HOME:
+    .SCOPE
+
+; Set cursor home
+    LDA             #%00000010
+    JSR             LCD_INSTRUCT
+    LDY             #2
+    JSR             DELAY_MSS
+    RTS
+
+    .ENDSCOPE
+
+; ==========================================================
+
+; Clear display.
+; It requires the LCD_INIT macro to be run first, to initialize the LCD.
+;
+; Registers modified:
+; A, X, Y
+;
+; Requirements:
+; par:var_hw.asm
+; sub:lcd.asm
+; mcr:utils.asm
+
+LCD_CLEAR:
+    .SCOPE
+
+; Clear display
+    LDA             #%00000001
+    JSR             LCD_INSTRUCT
+    LDY             #2
+    JSR             DELAY_MSS
+    RTS
+
+    .ENDSCOPE
+
+; ==========================================================
+
 ; Send an instruction to the LCD data register while in 4-bit mode, checking first the busy flag.
 ; This function can be used to display a character.
 ;

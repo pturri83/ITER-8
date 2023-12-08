@@ -2,7 +2,23 @@
 
 Notable changes to ITER-8 are recorded here.
 
-## Current Release - [0.2] - 2023-x-x
+
+## Current Release - [0.3] - 2023-12-07
+
+### Added
+
+- Bulk capacitor in the power module.
+- Push button to generate an interrupt.
+- Test #3 for handling an interrupt request.
+- Automatic reset when powering.
+
+### Changed
+
+- Reset button on the breadboard has been moved near the power button.
+- Improved schematics layout.
+
+
+## [0.2] - 2023-11-30
 
 ### Added
 
@@ -25,10 +41,9 @@ Notable changes to ITER-8 are recorded here.
 
 - Files included in `.gitignore`.
 
-## [0.1] - 2023-x-x
+
+## [0.1] - 2023-11-18
 
 ### Added
 
 - This release.
-
-<!-- markdownlint-configure-file {"MD024": false} -->

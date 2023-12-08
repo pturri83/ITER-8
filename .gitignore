@@ -3,7 +3,7 @@ Temp/
 
 # VisualStudio Code
 .vs/
-.code-workspace
+*.code-workspace
 
 # KiCad
 ITER-8-backups/

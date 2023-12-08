@@ -13,6 +13,7 @@
 ; Requirements:
 ; par:var_hw.asm
 ; sub:lcd.asm
+; mcr:utils.asm
 
     .MACRO          LCD_INIT CURSOR
     .SCOPE
@@ -58,16 +59,10 @@
     JSR             LCD_INSTRUCT
 
 ; Set cursor home
-    LDA             #%00000010
-    JSR             LCD_INSTRUCT
-    LDY             #2
-    JSR             DELAY_MSS
+    JSR             LCD_HOME
 
-; Clear LCD
-    LDA             #%00000001
-    JSR             LCD_INSTRUCT
-    LDY             #2
-    JSR             DELAY_MSS
+; Clear display
+    JSR             LCD_CLEAR
 
     .ENDSCOPE
     .ENDMACRO

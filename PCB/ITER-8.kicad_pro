@@ -414,7 +414,7 @@
     ]
   },
   "meta": {
-    "filename": "ITER-8_v1.kicad_pro",
+    "filename": "ITER-8.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -496,7 +496,7 @@
     ],
     [
       "b9433eb3-3fc6-445a-a64e-c387ada5526c",
-      "Peripherals"
+      "PERIPHERALS"
     ]
   ],
   "text_variables": {}
