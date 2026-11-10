@@ -1,0 +1,280 @@
+(footprint "LMC555CN"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Timer")
+	(tags "Timer")
+	(property "Reference" "REF**"
+		(at 0 -8.25 0)
+		(layer "F.Fab")
+		(uuid "ffe689fa-5434-4022-8047-af754a7dff8e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 30 -5.5 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6c9e0283-cb8f-4565-b8bd-262f343d23fd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "${ITER8_DATASHEET}/LMC555.pdf"
+		(at -7.62 -24.13 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "7f80312a-77ee-40e5-9608-5faf0f18ece4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Timer"
+		(at -7.62 -24.13 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "c87a982d-5ec3-48d3-b5b4-a2935fabeea5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "PDIP-8, MS-001-BA"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "deeff736-afa6-4453-a35f-9c9ff056f4b8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "33e2b69f-418e-470c-9716-a750aadbfa93")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" "LMC555CN"
+		(at 0 -6.25 0)
+		(layer "F.Fab")
+		(uuid "7510c094-042f-407f-b2bc-a425842556a1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -3.55 -5.33)
+		(end 3.55 -5.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6ab69bd1-db80-45ec-811e-a73104a8769d")
+	)
+	(fp_line
+		(start -3.55 -4.75)
+		(end -3.55 -5.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa8b5119-99f1-4750-a95a-1d199b044fe7")
+	)
+	(fp_line
+		(start -3.55 5.33)
+		(end -3.55 4.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32562564-bd2a-4666-8c4f-c03dd3fa590d")
+	)
+	(fp_line
+		(start -3.55 5.33)
+		(end 3.55 5.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7cfcbaa2-713e-47b9-a789-eb66b46f425a")
+	)
+	(fp_line
+		(start 3.55 -4.75)
+		(end 3.55 -5.33)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "55f27d26-1919-43d1-b2af-54df3daad3b7")
+	)
+	(fp_line
+		(start 3.55 5.33)
+		(end 3.55 4.75)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aefca259-143c-42fd-9005-c19947bb054f")
+	)
+	(fp_circle
+		(center -4.25 -5)
+		(end -4.05 -5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "dd8eb3a6-906c-48e8-ab76-813a735b75cc")
+	)
+	(fp_rect
+		(start 5 5.85)
+		(end -5 -5.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e4e202ee-98a3-46fb-9425-3756da314298")
+	)
+	(fp_rect
+		(start -3.3 5.08)
+		(end 3.3 -5.08)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8bb8b07a-201d-46df-9b8d-43b1b99396a6")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -7.25 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "15ff7423-d2da-4afa-af00-b11178d0262b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -3.81 -3.81)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "a1c3ea32-c565-4d0e-917d-0486253db611")
+	)
+	(pad "2" thru_hole circle
+		(at -3.81 -1.27)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "75da0a1a-a68a-4083-9657-2efa63f1cbd6")
+	)
+	(pad "3" thru_hole circle
+		(at -3.81 1.27)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "73c1a84d-8065-40a4-af9a-f868ddd75fd8")
+	)
+	(pad "4" thru_hole circle
+		(at -3.81 3.81)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "2f5937bf-a283-4142-a983-398cbd3cac3f")
+	)
+	(pad "5" thru_hole circle
+		(at 3.81 3.81)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "5707721c-70dc-4e38-b99d-b161ad30a5dc")
+	)
+	(pad "6" thru_hole circle
+		(at 3.81 1.27)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "72792620-b84b-4825-8c9e-91272732e311")
+	)
+	(pad "7" thru_hole circle
+		(at 3.81 -1.27)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "cb29a1d3-35b5-484c-978c-c8c42d083d92")
+	)
+	(pad "8" thru_hole circle
+		(at 3.81 -3.81)
+		(size 1.28 1.28)
+		(drill 0.78)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "b7e87d70-2cee-4ef0-a3f8-c30467f8bc09")
+	)
+	(embedded_fonts no)
+	(model "${ITER8_3DMODEL}/LMC555CN.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

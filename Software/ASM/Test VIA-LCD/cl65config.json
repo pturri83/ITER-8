@@ -1,0 +1,5 @@
+{
+  "executable": "/Applications/cc65/cc65/bin/cl65",
+  "input": "test_via_lcd.asm",
+  "params": "--target none -W2 -o ../../Binary/test_via_lcd.bin"
+}

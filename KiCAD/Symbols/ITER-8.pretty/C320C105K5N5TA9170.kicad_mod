@@ -1,0 +1,167 @@
+(footprint "C320C105K5N5TA9170"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Non-polarized ceramic capacitor")
+	(tags "Capacitor, ceramic, non-polarized")
+	(property "Reference" "REF**"
+		(at 0 -5.25 0)
+		(layer "F.Fab")
+		(uuid "8a29945a-0ecf-4424-acad-d9ded6a0319e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 0 -3.5 0)
+		(layer "F.Fab")
+		(uuid "a9d8cea7-a648-41ee-8f65-bfbfbe8f7077")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "${ITER8_DATASHEET}/C320C105K5N5TA9170.pdf"
+		(at -2.5 0 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "5997a547-9d0f-4840-86c5-a99f9b50f918")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Non-polarized ceramic capacitor"
+		(at -2.5 0 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "93ee5e2e-534e-41be-8132-f6dea60e57a3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "THT, Radial"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "ed2930ec-b22f-4728-95ef-af9f1eb89ebc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "KEMET"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "eec4b7e5-2bd9-4225-90a5-6a36e6f7fc4f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" "C320C105K5N5TA9170"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f8a5f23-a20c-4fb5-a47c-54626cfaff7a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -2.79 1.84)
+		(end 2.79 -1.84)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "0c7a02bd-78bf-4bde-a746-87f3d6e9b2d3")
+	)
+	(fp_rect
+		(start -3.3 2.35)
+		(end 3.3 -2.35)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "5d50bc94-5bce-4b67-b4ef-d4eeff00354e")
+	)
+	(fp_rect
+		(start -2.54 1.59)
+		(end 2.54 -1.59)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a5c27cd1-97ff-484f-bf01-0c0d4573525f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "427f4e8a-0b74-4b05-a672-121a918859df")
+		(effects
+			(font
+				(size 0.94 0.94)
+				(thickness 0.141)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -1.27 0)
+		(size 1.26 1.26)
+		(drill 0.76)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "5d2bb97b-b758-4ce7-bee7-ebf810b54e09")
+	)
+	(pad "2" thru_hole circle
+		(at 1.27 0)
+		(size 1.26 1.26)
+		(drill 0.76)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "2aadeb9c-1e02-4a23-80c4-e9019bc2fbe9")
+	)
+	(embedded_fonts no)
+	(model "${ITER8_3DMODEL}/C320C105K5N5TA9170.stp"
+		(offset
+			(xyz 2.54 1.59 1)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

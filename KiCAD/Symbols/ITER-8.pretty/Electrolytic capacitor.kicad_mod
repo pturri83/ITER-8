@@ -1,0 +1,189 @@
+(footprint "Electrolytic capacitor"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Polarized electrolytic capacitor")
+	(tags "Capacitor, electrolytic, polarized")
+	(property "Reference" "REF**"
+		(at 0 -7 0)
+		(layer "F.Fab")
+		(uuid "8a29945a-0ecf-4424-acad-d9ded6a0319e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 0 -5.25 0)
+		(layer "F.Fab")
+		(uuid "a9d8cea7-a648-41ee-8f65-bfbfbe8f7077")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at -2.5 0.372 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "5997a547-9d0f-4840-86c5-a99f9b50f918")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Polarized electrolytic capacitor"
+		(at -2.5 0 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "93ee5e2e-534e-41be-8132-f6dea60e57a3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" ""
+		(at 0 0.372 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "ed2930ec-b22f-4728-95ef-af9f1eb89ebc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" ""
+		(at 0 0.372 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "eec4b7e5-2bd9-4225-90a5-6a36e6f7fc4f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" ""
+		(at 0 0.372 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f8a5f23-a20c-4fb5-a47c-54626cfaff7a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -4.75 0)
+		(end -4.55 0)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "70b8579d-ec8c-4882-9832-1cb87d14bcbd")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4.25 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7b3d9c33-ac28-4994-849c-20e352ee3ad0")
+	)
+	(fp_arc
+		(start -4.782424 -0.75)
+		(mid 4.840875 -0.002528)
+		(end -4.781638 0.754995)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ddff27b4-7b62-4dc9-86d0-c5171ef9ff32")
+	)
+	(fp_arc
+		(start -4.782424 0.749994)
+		(mid -5.500695 0)
+		(end -4.782424 -0.749994)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "5797eca6-5300-46fa-a346-9be1b9015b32")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "8fe10aa2-1d57-4077-b241-b247d0abf0ee")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -5.75 0)
+		(layer "F.SilkS")
+		(uuid "427f4e8a-0b74-4b05-a672-121a918859df")
+		(effects
+			(font
+				(size 0.94 0.94)
+				(thickness 0.141)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0)
+		(size 1.3 1.3)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "5d2bb97b-b758-4ce7-bee7-ebf810b54e09")
+	)
+	(pad "2" thru_hole circle
+		(at 1.27 0)
+		(size 1.3 1.3)
+		(drill 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "2aadeb9c-1e02-4a23-80c4-e9019bc2fbe9")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Capacitor_THT.3dshapes/CP_Radial_D8.0mm_P2.50mm.step"
+		(offset
+			(xyz -1.27 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+)

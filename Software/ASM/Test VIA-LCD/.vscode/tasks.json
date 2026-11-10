@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",
+
+	"tasks": [
+		{
+			"type": "ca65",
+
+			"config": "test_via_lcd.cfg",
+
+			"problemMatcher": [
+				"$ca65",
+				"$ld65"
+			],
+
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+
+			"presentation": {
+                "clear": true
+            },
+
+			"label": "ca65: Build with test_via_lcd.cfg"
+		}
+	]
+}

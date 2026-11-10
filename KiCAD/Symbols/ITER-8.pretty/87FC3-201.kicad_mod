@@ -1,0 +1,249 @@
+(footprint "87FC3-201"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "4-directions joystick")
+	(tags "Joystick")
+	(property "Reference" "REF**"
+		(at 0 -10.25 0)
+		(layer "F.Fab")
+		(uuid "feaf2315-9459-4e5b-bd06-106bc303634a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 0 -3.25 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b7ee0cd7-bfee-496b-92c1-d88704fe67fa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "${ITER8_DATASHEET}/04A-B01.pdf"
+		(at -5.08 0 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "1c130978-1a4e-4a76-ac71-bca152c08cd9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "4-directions joystick"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "User.1")
+		(hide yes)
+		(uuid "6e87b304-2cc2-4cf8-972f-917038fbf24c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" ""
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "94bb855f-ef1b-4b6f-bc63-e4c50bc95628")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Grayhill"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "8bb541ec-692b-4e64-95c7-45cde0ab9061")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" "04A-B01"
+		(at 0 -9 0)
+		(layer "F.Fab")
+		(uuid "f242f396-c819-4072-856f-3ca4189a423c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -25.715 6.6)
+		(end 25.715 -6.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "30f34a53-de02-4c26-8844-816cdb95659d")
+	)
+	(fp_circle
+		(center -22.855 -5.5)
+		(end -22.655 -5.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "d29df6a2-4d94-4d87-9e95-4d034d28e679")
+	)
+	(fp_rect
+		(start -26.215 7.1)
+		(end 26.215 -7.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "df6a4033-6601-4fcc-bd5e-712a4a28de0a")
+	)
+	(fp_rect
+		(start -25.465 6.35)
+		(end 25.465 -6.35)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "cdf959a0-a73e-4444-bffc-0ee6af029847")
+	)
+	(fp_rect
+		(start -23.825 4.775)
+		(end -14.275 -4.775)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7e15eb7a-ef25-496f-b02a-0b8a1577d169")
+	)
+	(fp_rect
+		(start -11.125 4.775)
+		(end -1.575 -4.775)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "e883cc66-2a89-41a0-9d3c-980ebc24318e")
+	)
+	(fp_rect
+		(start 1.575 4.775)
+		(end 11.125 -4.775)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "63404b87-5718-4013-9295-c3c4aaf31a46")
+	)
+	(fp_rect
+		(start 14.275 4.775)
+		(end 23.825 -4.775)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "7e66791a-4a3c-4bf3-b9ec-085d4f983d86")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -9.25 0)
+		(layer "F.SilkS")
+		(uuid "490a7353-000a-4ef9-ab08-ee8fdad234e7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -22.855 3.815)
+		(size 1.52 1.52)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "2f91f3f3-9c91-4e72-beff-15cd0f00e8e7")
+	)
+	(pad "2" thru_hole circle
+		(at -15.235 3.815)
+		(size 1.52 1.52)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "8344306a-f2e9-488c-89f8-795d49418b7b")
+	)
+	(pad "3" thru_hole circle
+		(at -2.535 3.815)
+		(size 1.52 1.52)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "82744067-24a5-4eb4-805e-af93dc9d58f1")
+	)
+	(pad "4" thru_hole circle
+		(at 10.165 3.815)
+		(size 1.52 1.52)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "e134fd83-01d4-42e8-9ab4-1e68d8c0dc49")
+	)
+	(pad "5" thru_hole circle
+		(at 22.865 3.815)
+		(size 1.52 1.52)
+		(drill 1.02)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "1391d634-9b69-420b-8c99-a60aa388fc9c")
+	)
+	(embedded_fonts no)
+	(model "${ITER8_3DMODEL}/87FC3-201.stp"
+		(offset
+			(xyz -15.235 -3.815 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -180)
+		)
+	)
+)

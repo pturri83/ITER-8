@@ -1,0 +1,252 @@
+(footprint "DC-005"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Barrel jack connector with internal switch")
+	(tags "Connector, Barrel Jack")
+	(property "Reference" "REF**"
+		(at 0 -12 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "21e3c59a-b215-4171-9a38-5ba61862af32")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 8.5 -11 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a3978e5-db11-4b6b-a684-a92583f477ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "${ITER8_DATASHEET}/DC-005.jpeg"
+		(at 0 -3.85 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "1f7e1c54-0bfd-47e7-be8d-75d33f6ce639")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Barrel jack connector with internal switch"
+		(at 0 -3.85 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "dbfe82fe-7b32-4351-9c7b-ca1e31bc1492")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" ""
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "2dd492c5-c1e7-425c-b916-1237c9b4e260")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" ""
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "e8a6c080-c9e9-439e-aa1a-b4588b6a35db")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" "DC-005"
+		(at 0 -10 0)
+		(layer "F.Fab")
+		(uuid "8144ba2f-7436-4ce1-98bf-65350a391dce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -4.95 -7.9)
+		(end 5.8 7.5)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "85a63b20-bb9d-4e6e-82d7-7f23576da603")
+	)
+	(fp_circle
+		(center 0 -8.4)
+		(end 0.2 -8.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "82f6fed8-5531-43da-8537-d5665c246f3d")
+	)
+	(fp_line
+		(start -5.45 -8.4)
+		(end -5.45 8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "b9b00f7e-dbc0-41f7-8b0a-6957a428a5f1")
+	)
+	(fp_line
+		(start -5.45 -8.4)
+		(end -0.75 -8.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "bfc65bb9-eb75-4cef-a21c-a93ab72f2474")
+	)
+	(fp_line
+		(start 6.3 -8.4)
+		(end 0.75 -8.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "0e427c62-d4b1-4959-a631-5219c9e9f3fa")
+	)
+	(fp_line
+		(start 6.3 8)
+		(end -5.45 8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "bcd4f94f-d64a-4aec-b1c3-b0c70d76e369")
+	)
+	(fp_line
+		(start 6.3 8)
+		(end 6.3 -8.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "9be32934-4dd3-417e-8fad-43b862b11a32")
+	)
+	(fp_arc
+		(start -0.75 -8.4)
+		(mid 0 -9.15)
+		(end 0.75 -8.4)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "F.CrtYd")
+		(uuid "d153e287-b026-48de-9231-c179bd3adc4f")
+	)
+	(fp_rect
+		(start -4.45 -7)
+		(end 4.45 7)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "ac529c89-0c9e-4a2a-9b29-b188913a5a33")
+	)
+	(fp_rect
+		(start -2 6)
+		(end 2 7)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "1bbcc52a-dcdf-4569-b56e-3b0e21ae6e67")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -11 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "001bbc82-51a3-4cd0-94d2-cf11d3f6bec9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 0 -6.8)
+		(size 3.25 1.05)
+		(drill oval 2.75 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(thermal_bridge_angle 45)
+		(uuid "9098f3f2-f66c-44ff-90f5-607d30a37a06")
+	)
+	(pad "2" thru_hole oval
+		(at 0 -0.9)
+		(size 3.25 1.05)
+		(drill oval 2.75 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(thermal_bridge_angle 45)
+		(uuid "350ec634-b1a4-4313-96c9-ad3b4f7308bd")
+	)
+	(pad "3" thru_hole oval
+		(at 4.7 -3.7 90)
+		(size 3.25 1.05)
+		(drill oval 2.75 0.55)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(thermal_bridge_angle 45)
+		(uuid "38888f32-6a00-4fcc-98ed-ffedccfc6bd3")
+	)
+	(embedded_fonts no)
+	(model "${ITER8_3DMODEL}/DC-005.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)

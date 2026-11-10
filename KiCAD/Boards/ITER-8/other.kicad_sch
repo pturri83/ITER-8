@@ -1,0 +1,15 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "51aab212-7b89-460e-b28f-ff2987059b71")
+	(paper "USLetter")
+	(title_block
+		(title "${SHEETNAME}")
+		(date "2025-04-20")
+		(rev "A")
+		(company "Paolo Turri")
+		(comment 1 "ITER-8")
+	)
+	(lib_symbols)
+)

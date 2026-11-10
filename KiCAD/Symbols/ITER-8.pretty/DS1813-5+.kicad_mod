@@ -1,0 +1,297 @@
+(footprint "DS1813-5+"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Power monitor and pushbutton reset")
+	(tags "Power Monitor, Reset")
+	(property "Reference" "REF**"
+		(at 0 -4.5 0)
+		(layer "F.Fab")
+		(uuid "bbbfbc19-567c-498e-bcc0-0ee8c6bbca80")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(property "Value" "VAL**"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1a27d6ea-1762-4331-b4b0-9ace3d89decb")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(property "Datasheet" "${ITER8_DATASHEET}/DS1813.pdf"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "64b09c5b-e22a-45f0-9a9f-776fd0ec3249")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Power monitor and pushbutton reset"
+		(at -2.5 -11.53 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "c7dce99f-a4b5-4018-af62-84a791122687")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "TO-92"
+		(at 0 0 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "aaed2230-c831-4609-8080-3c7e20ff16e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Maxim Integrated"
+		(at -2.5 -11.53 0)
+		(layer "User.1")
+		(hide yes)
+		(uuid "4456d706-9cc7-47f1-9c06-5803bb23466d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part Number" "DS1813-5+"
+		(at 0 -3.5 0)
+		(layer "F.Fab")
+		(uuid "b2f285ed-1404-44af-b8bc-b9e143752e0b")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -1.85 1.55)
+		(end -2.65 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7aec1b93-b38e-409a-b5f7-f46fabc8360a")
+	)
+	(fp_line
+		(start -1.85 1.55)
+		(end 1.85 1.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2d51c59a-cab4-4121-a5f1-b8038ae5f8df")
+	)
+	(fp_line
+		(start 2.65 0)
+		(end 1.85 1.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21b3da5b-a904-4339-9631-2b1208df85a3")
+	)
+	(fp_arc
+		(start -2.65 0)
+		(mid 0 -2.65)
+		(end 2.65 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "944c5a37-5601-413e-bbcc-607347ce3efb")
+	)
+	(fp_circle
+		(center -1.27 2.1)
+		(end -1.07 2.1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "8d0edc4b-dd12-468d-807d-7131a5ee4dd9")
+	)
+	(fp_line
+		(start -2.2 2.1)
+		(end -3.2 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e9a94830-caad-4db9-9032-964bd275c3d9")
+	)
+	(fp_line
+		(start -2.04 2.1)
+		(end -2.2 2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d241ac71-2f6a-4120-9e39-d3ecb5cf5606")
+	)
+	(fp_line
+		(start -0.5 2.1)
+		(end 2.2 2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "aed31dbc-0574-4ec8-a373-3d91a0fdf06c")
+	)
+	(fp_line
+		(start 2.2 2.1)
+		(end 3.2 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c0757e5f-1796-44c7-b8c1-dbbfe8701896")
+	)
+	(fp_arc
+		(start -3.2 0)
+		(mid 0 -3.2)
+		(end 3.2 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ac8b8652-9883-4bd4-aaf3-ab75204e7aaf")
+	)
+	(fp_arc
+		(start -0.5 2.1)
+		(mid -1.27 2.87)
+		(end -2.04 2.1)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "163f5cac-916e-400b-9297-63bbebf6bf6e")
+	)
+	(fp_line
+		(start -1.72 1.3)
+		(end -2.4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1f7b1d79-6156-427f-9a04-715f26d44edb")
+	)
+	(fp_line
+		(start -1.72 1.3)
+		(end 1.72 1.3)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8d6a24f5-9b89-4783-9fc1-52957f24452d")
+	)
+	(fp_line
+		(start 1.72 1.3)
+		(end 2.4 0)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "34600a3e-dd92-4efb-b8ba-6b1985f79fc8")
+	)
+	(fp_arc
+		(start -2.4 0)
+		(mid 0 -2.4)
+		(end 2.4 0)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "529f46a0-e4f2-40ce-99e2-ddbf86247b2a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "359b9946-0ef3-4025-bb43-78727bccb732")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0)
+		(size 1.1 1.1)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "adc4321a-fbb1-4ea8-b49e-4bec5552db55")
+	)
+	(pad "2" thru_hole circle
+		(at 0 0)
+		(size 1.1 1.1)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "97f79087-d777-4934-9489-83328e88e27c")
+	)
+	(pad "3" thru_hole circle
+		(at 1.27 0)
+		(size 1.1 1.1)
+		(drill 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers yes)
+		(keep_end_layers yes)
+		(uuid "5f319c06-ea99-4099-aac3-fb0dabaec1ba")
+	)
+	(embedded_fonts no)
+	(model "${ITER8_3DMODEL}/DS1813-5+.step"
+		(offset
+			(xyz 0 0 -15)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
+)
